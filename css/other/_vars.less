@@ -1,0 +1,50 @@
+// main: ../style.less
+
+// Theme
+.theme-light {
+    --color-primary: #d6f7fc;
+    --color-secondary: #222136;
+
+    --color-no-active: rgba(34, 33, 54, 0.35);
+    --color-shadow: rgba(34, 33, 54, 0.1);
+    --color-modal-background: rgba(214, 247, 252, 0.9);
+    --color-form-shadow-one: rgba(0, 0, 0, 0.5);
+    --color-form-shadow-two: rgba(0, 0, 0, 0.1);
+    --color-header-fixed: rgba(57, 63, 72, 0.3);
+}
+
+
+.theme-dark {
+    --color-primary: #222136;
+    --color-secondary: #d6f7fc;
+
+    --color-no-active: rgba(214, 247, 252, 0.35);
+    --color-shadow: rgba(214, 247, 252, 0.1);
+    --color-modal-background: rgba(34, 33, 54, 0.9);
+    --color-form-shadow-one: rgba(255, 255, 255, 0.5);
+    --color-form-shadow-two: rgba(255, 255, 255, 0.1);
+    --color-header-fixed: rgba(139, 153, 175, 0.3);
+}
+
+
+
+// Colors
+@primary: var(--color-primary);
+@secondary: var(--color-secondary);
+
+@no-active: var(--color-no-active);
+@shadow: var(--color-shadow);
+@modalBackground: var(--color-modal-background);
+@formShadowOne: var(--color-form-shadow-one);
+@formShadowTwo: var(--color-form-shadow-two);
+@headerFixed: var(--color-header-fixed);
+
+
+
+// Breakpoints
+@large: (max-width: 1470px);
+@desktop: (max-width: 1200px);
+@laptop: (max-width: 1024px);
+@tablet: (max-width: 768px);
+@mobile: (max-width: 480px);
+@small: (max-width: 320px);

@@ -1,0 +1,82 @@
+// main: ../style.less
+
+.icons {
+    width: 3rem;
+    height: 3rem;
+
+    fill: @secondary;
+
+    .center(50%, 50%, -50%, -50%);
+
+    transition: fill 0.2s linear, stroke 0.2s linear, opacity 0.2s linear;
+
+
+    &--theme {
+        stroke: @secondary;
+    }
+
+    &--profile {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &--about {
+        width: 4rem;
+        height: 4rem;
+
+        .center(50%, 0, 0, -50%);
+    }
+
+    &--clip {
+        .center(3rem, calc(100% - 7rem), 0, 0);
+    }
+
+    &--socials,
+    &--clip {
+        width: 4rem;
+        height: 4rem;
+
+        opacity: 80%;
+
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+
+    &--test {
+        display: none;
+
+        left: 1rem;
+    }
+}
+
+
+
+@media @laptop {
+    .icons {
+        width: 2rem;
+        height: 2rem;
+
+
+        &--profile {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &--clip {
+            top: 1.5rem;
+            left: calc(100% - 3.5rem);
+        }
+    }
+}
+
+
+
+@media @tablet {
+    .icons {
+        &--profile {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// main: ../style.less
+
+.font(@fw, @fz) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: @fw;
+    font-size: @fz;
+    line-height: 1.5;
+    color: @secondary;
+}
+
+
+.flex(@jc) {
+    display: flex;
+    justify-content: @jc;
+    align-items: center;
+}
+
+
+.center(@tp, @lf, @fl, @ft) {
+    position: absolute;
+    top: @tp;
+    left: @lf;
+    z-index: 1;
+
+    transform: translate(@fl, @ft);
+}
+
+
+.element(@wd, @hg, @bg) {
+    content: "";
+    display: block;
+    width: @wd;
+    height: @hg;
+
+    background-color: @bg;
+
+    position: absolute;
+    z-index: 1;
+}
