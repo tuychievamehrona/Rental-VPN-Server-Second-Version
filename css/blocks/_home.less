@@ -1,0 +1,238 @@
+// main: ../style.less
+
+.home {
+    .flex(normal);
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.home__inner {
+    height: 38rem;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+
+.home__title {
+    margin-bottom: 4rem;
+
+    .font(900, 9rem);
+}
+
+
+
+.home__subtitle {
+    margin-bottom: 6rem;
+
+    .font(700, 2.4rem);
+}
+
+
+
+.home__text {
+    font-weight: 500;
+    letter-spacing: 0.2em;
+}
+
+
+
+.home__slogan {
+    .font(700, 4.5rem);
+    .center(50%, 50%, -50%, -50%);
+
+    margin-top: 15rem;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+
+    & span {
+        opacity: 50%;
+    }
+
+    & span:nth-child(9),
+    & span:nth-child(11) {
+        opacity: 75% !important;
+    }
+
+    & span:nth-child(10) {
+        opacity: 100% !important;
+    }
+}
+
+
+
+@media @large {
+    .home__title {
+        font-size: 8rem;
+    }
+
+
+
+    .home__subtitle {
+        font-size: 2rem;
+    }
+
+
+
+    .home__slogan {
+        font-size: 4rem;
+    }
+}
+
+
+
+@media @desktop {
+    .home__inner {
+        height: 28rem;
+    }
+
+
+
+    .home__title {
+        margin-bottom: 2rem;
+        font-size: 7rem;
+    }
+
+
+
+    .home__subtitle {
+        margin-bottom: 3rem;
+    }
+
+
+
+    .home__slogan {
+        margin-top: 10rem;
+
+        font-size: 3.5rem;
+    }
+}
+
+
+
+@media @laptop {
+    .home__inner {
+        height: 18rem;
+    }
+
+
+
+    .home__title {
+        margin-bottom: 0;
+
+        font-size: 5rem;
+    }
+
+
+
+    .home__subtitle {
+        margin-bottom: 1rem;
+
+        font-size: 1.8rem;
+    }
+
+
+
+    .home__slogan {
+        margin-top: 6rem;
+
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+    }
+}
+
+
+
+@media @tablet {
+    .home__inner {
+        height: 14rem;
+    }
+
+
+
+    .home__title {
+        font-size: 3.5rem;
+    }
+
+
+
+    .home__subtitle {
+        font-size: 1.2rem;
+    }
+
+
+
+    .home__text {
+        letter-spacing: 0.1em;
+    }
+
+
+
+    .home__slogan {
+        margin-top: 4.5rem;
+
+        font-size: 2rem;
+    }
+}
+
+
+
+@media @mobile {
+    .home__inner {
+        height: 12rem;
+    }
+
+
+
+    .home__title {
+        font-size: 2.5rem;
+    }
+
+
+
+    .home__subtitle {
+        font-size: 1.1rem;
+    }
+
+
+
+    .home__slogan {
+        margin-top: 4rem;
+
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media @small {
+    .home__inner {
+        height: 11rem;
+    }
+
+
+
+    .home__title {
+        font-size: 2rem;
+    }
+
+
+
+    .home__subtitle {
+        width: 14rem;
+        margin: 0 auto;
+    }
+
+
+
+    .home__slogan {
+        margin-top: 3.5rem;
+    }
+}

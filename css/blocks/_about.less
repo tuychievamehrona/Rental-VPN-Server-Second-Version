@@ -1,0 +1,420 @@
+// main: ../style.less
+
+.about {
+    .flex(normal);
+
+    height: calc(100vh + 6rem);
+}
+
+
+
+.about__inner {
+    .flex(space-between);
+
+    margin: 0 auto;
+}
+
+
+
+.about__services {
+    width: 30%;
+    height: 63.6rem;
+    padding: 3rem;
+    margin-right: 6rem;
+
+    border: 0.1rem solid @secondary;
+    box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+}
+
+
+
+.about__item {
+    height: 17.2rem;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+
+    font-weight: 500;
+
+    text-align: center;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.about__name {
+    .font(700, 2.4rem);
+}
+
+
+
+.about__price {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1.2rem auto 0;
+
+    font-size: 2.8rem;
+
+    border: 0.1rem solid @secondary;
+    cursor: pointer;
+    overflow: hidden;
+
+    position: relative;
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+
+    &:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+
+
+    &::after {
+        content: "";
+
+        background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -50%;
+
+        transform: rotateZ(60deg) translate(-5em, 7.5em);
+    }
+
+    &:after, &:after {
+        animation: sheen 2s forwards;
+        animation-iteration-count:infinite;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes sheen {
+        100% {
+            transform: rotateZ(60deg) translate(1em, -9em);
+        }
+    }
+}
+
+
+
+.about__info {
+    width: 70%;
+}
+
+
+
+.about__pros {
+    padding: 3rem;
+
+    border: 0.1rem solid @secondary;
+    box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+}
+
+
+
+.about__title {
+    .font(700, 2.4rem);
+
+    text-align: center;
+
+
+    &--pros {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+.about__block {
+    .flex(normal);
+
+    flex-wrap: wrap;
+}
+
+
+
+.about__text {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding-left: 6rem;
+
+    position: relative;
+
+
+    &--pros {
+        width: 50%;
+    }
+}
+
+
+
+.about__instruction {
+    padding: 3rem;
+    margin-top: 6rem;
+
+    border: 0.1rem solid @secondary;
+    box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+}
+
+
+
+@media @large {
+    .about__services {
+        height: 62.4rem;
+    }
+
+
+
+    .about__name {
+        font-size: 2rem;
+    }
+
+
+
+    .about__price {
+        font-size: 2.4rem;
+    }
+
+
+
+    .about__title {
+        font-size: 2rem;
+    }
+}
+
+
+
+@media @desktop {
+    .about__services,
+    .about__pros,
+    .about__instruction {
+        padding: 1.5rem;
+    }
+
+
+
+    .about__services {
+        height: 53.4rem;
+        margin-right: 3rem;
+    }
+
+
+
+    .about__item {
+        margin-bottom: 0;
+    }
+
+
+
+    .about__instruction {
+        margin-top: 3rem;
+    }
+}
+
+
+
+@media @laptop {
+    .about {
+        height: calc(100vh + 2rem);
+    }
+
+
+
+    .about__services {
+        width: 25%;
+        height: 43.9rem;
+        margin-right: 1.5rem;
+    }
+
+
+
+    .about__item {
+        height: 13.6rem;
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+
+
+    .about__name {
+        font-size: 1.5rem;
+    }
+
+
+
+    .about__price {
+        font-size: 2rem;
+    }
+
+
+
+    .about__info {
+        width: 75%;
+    }
+
+
+
+    .about__pros {
+        padding-bottom: 0.5rem;
+    }
+
+
+
+    .about__title {
+        &--pros {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+    .about__text {
+        height: 5rem;
+        padding-left: 3rem;
+    }
+
+
+
+    .about__instruction {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+@media @tablet {
+    .about__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        position: relative;
+    }
+
+
+
+    .about__services {
+        width: 35%;
+        height: 37.6rem;
+        margin-right: 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+
+
+    .about__name {
+        font-size: 1.2rem;
+    }
+
+
+
+    .about__item {
+        height: 11.5rem;
+        margin-top: 0.4rem;
+    }
+
+
+
+    .about__price {
+        font-size: 1.6rem;
+    }
+
+
+
+    .about__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+
+
+    .about__pros {
+        width: 62%;
+    }
+
+
+
+    .about__title {
+        font-size: 1.6rem;
+    }
+
+
+
+    .about__instruction {
+        width: 100%;
+    }
+
+
+
+    .about__text {
+        height: 4rem;
+
+
+        &--pros {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media @mobile {
+    .about {
+        height: calc(100vh * 1.5);
+    }
+
+
+
+    .about__services {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        position: static;
+    }
+
+
+
+    .about__pros {
+        width: 100%;
+    }
+
+
+
+    .about__text {
+        &--instruction {
+            height: 6rem;
+        }
+    }
+}
+
+
+
+@media @small {
+    .about {
+        height: calc(100vh * 2);
+    }
+
+
+
+    .about__text {
+        &--pros {
+            height: 6rem;
+        }
+
+        &--instruction {
+            height: 8rem;
+        }
+    }
+}

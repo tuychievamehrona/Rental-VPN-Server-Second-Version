@@ -1,0 +1,253 @@
+// main: ../style.less
+
+.sign {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 6rem;
+
+    background-color: @primary;
+    border: 0.1rem solid @secondary;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+.sign__item {
+    display: block;
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 3rem;
+
+    .font(400, 2rem);
+
+    background-color: @primary;
+    border: 0.1rem solid @secondary;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+
+    &:focus {
+        box-shadow: 0rem 0rem 0rem 0.2rem @formShadowOne,
+            0rem 0.2rem 0.4rem @formShadowTwo,
+            0rem 0.4rem 0.8rem @formShadowTwo,
+            0rem 0.8rem 1.6rem @formShadowTwo;
+    }
+
+
+    &--input {
+        padding-left: 3rem;
+
+        transition: box-shadow 0.2s linear;
+    }
+
+    &--input::placeholder {
+        .font(500, 2rem);
+
+        opacity: 80%;
+    }
+
+    &--input:hover {
+        box-shadow: 0rem 0rem 0rem 0.2rem @formShadowOne,
+            0rem 0.2rem 0.4rem @formShadowTwo,
+            0rem 0.4rem 0.8rem @formShadowTwo,
+            0rem 0.8rem 1.6rem @formShadowTwo;
+    }
+
+
+    &--button {
+        .font(500, 2rem);
+
+        transition: color 0.2s linear, background-color 0.2s linear;
+    }
+
+    &--button:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+}
+
+
+
+.sign__text {
+    .font(500, 2.4rem);
+    text-align: center;
+}
+
+
+
+.sign__buttons {
+    .flex(space-between);
+    margin-top: 6rem;
+}
+
+
+
+.sign__btn {
+    padding: 1.5rem 3rem;
+
+    .font(700, 2rem);
+
+    border: 0.1rem solid @secondary;
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+
+    &:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+}
+
+
+
+@media @large {
+    .sign__item {
+        font-size: 1.8rem;
+
+
+        &::placeholder {
+            font-size: 1.8rem;
+        }
+    }
+
+
+
+    .sign__text {
+        font-size: 2rem;
+    }
+
+
+
+    .sign__btn {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@media @desktop {
+    .sign {
+        width: 60%;
+        padding: 3rem;
+    }
+
+
+
+    .sign__item {
+        height: 5rem;
+        margin-bottom: 1.5rem;
+
+        font-size: 1.6rem;
+
+
+        &--input {
+            padding-left: 1.5rem;
+        }
+
+
+        &::placeholder {
+            font-size: 1.6rem;
+        }
+    }
+
+
+
+    .sign__buttons {
+        margin-top: 3rem;
+    }
+
+
+
+    .sign__btn {
+        padding: 1rem 2rem;
+
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media @laptop {
+    .sign {
+        width: 65%;
+        padding: 1.5rem;
+    }
+
+
+
+    .sign__item {
+        height: 4rem;
+
+        font-size: 1.4rem;
+
+
+        &::placeholder {
+            font-size: 1.4rem;
+        }
+    }
+
+
+
+    .sign__text {
+        font-size: 1.8rem;
+    }
+
+
+
+    .sign__buttons {
+        margin-top: 1.5rem;
+    }
+
+
+
+    .sign__btn {
+        padding: 0.5rem 1rem;
+
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media @tablet {
+    .sign__item {
+        font-size: 1.2rem;
+
+
+        &::placeholder {
+            font-size: 1.2rem;
+        }
+    }
+
+
+
+    .sign__text {
+        font-size: 1.6rem;
+    }
+
+
+
+    .sign__btn {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+@media @mobile {
+    .sign {
+        width: 100%;
+    }
+}

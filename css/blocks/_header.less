@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.header {
+    width: 100%;
+    margin-top: 3rem;
+
+    background-color: @primary;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+
+    &.fixed {
+        margin-top: 0;
+
+        -webkit-box-shadow: 0 0.3rem 0.5rem @shadow;
+        -moz-box-shadow: 0 0.3rem 0.5rem @shadow;
+        box-shadow: 0 0.3rem 0.5rem @shadow;
+
+        position: fixed;
+    }
+}
+
+
+.header__inner {
+    .flex(space-between);
+
+    position: relative;
+}
+
+
+.header__menu {
+    .flex(normal);
+}
+
+
+
+@media @laptop {
+    .header {
+        margin-top: 1.5rem;
+    }
+}

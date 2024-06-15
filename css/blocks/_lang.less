@@ -1,0 +1,61 @@
+// main: ../style.less
+
+.lang {
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+
+
+
+.lang__button {
+    display: none;
+    padding: 0 0.6rem;
+
+    color: @secondary;
+
+    border: 0.1rem solid @secondary;
+    cursor: default;
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+
+    &:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+
+
+    &.active {
+        display: block;
+    }
+}
+
+
+
+.lang__en,
+.lang__ru {
+    display: none;
+}
+
+
+.lang__en.active,
+.lang__ru.active {
+    display: inline-block;
+}
+
+
+
+@media @desktop {
+    .lang {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+@media @laptop {
+    .lang {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,335 @@
+// main: ../style.less
+
+.profile {
+    display: block;
+    width: 42rem;
+    height: calc(100vh - 9rem);
+    padding: 1.5rem;
+
+    background-color: @primary;
+    -webkit-box-shadow: 0.3rem 0.3rem 0.3rem @headerFixed;
+    -moz-box-shadow: 0.3rem 0.3rem 0.3rem @headerFixed;
+    box-shadow: 0.3rem 0.3rem 0.3rem @headerFixed;
+
+    transition: left 0.2s linear;
+
+    position: absolute;
+    bottom: 0;
+    left: -42.5rem;
+    z-index: 1000;
+
+
+    &.fixed {
+        height: calc(100vh - 6rem);
+
+        position: fixed;
+    }
+
+    &.active {
+        left: 0;
+    }
+}
+
+
+
+.profile__header {
+    .flex(space-between);
+
+    position: relative;
+}
+
+
+
+.profile__info,
+.profile__name,
+.profile__date {
+    display: inline-block;
+}
+
+
+
+// .profile__info {}
+
+
+
+.profile__name {
+    font-weight: 700;
+}
+
+
+
+.profile__date {
+    margin: 0 1.5rem;
+
+    opacity: 0.5;
+}
+
+
+
+.profile__close {
+    font-size: 0;
+    color: transparent;
+
+    position: relative !important;
+}
+
+
+
+.profile__check {
+    margin-top: 3rem;
+    padding-left: 3rem;
+
+    position: relative;
+
+
+    &:before {
+        .element(2rem, 2rem, none);
+
+        border: 0.5rem solid @secondary;
+        border-radius: 50%;
+
+        .center(50%, 0, 0, -50%);
+    }
+
+
+    &.used&:before {
+        display: none;
+    }
+
+    &.used .icons--test {
+        display: block;
+    }
+}
+
+
+
+.profile__block {
+    margin-top: 3rem;
+}
+
+
+
+.profile__title {
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.profile__text {
+    margin-top: 1.5rem;
+
+    text-align: center;
+
+    opacity: 0.35;
+}
+
+
+
+.profile__menu {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+
+    border: 0.1rem solid @secondary;
+    border-radius: 50%;
+
+    position: relative;
+    transition: background-color 0.2s linear;
+
+
+    &:hover,
+    &.active {
+        background-color: @secondary;
+    }
+
+
+    &:hover .icons,
+    &.active .icons {
+        fill: @primary;
+    }
+
+
+    &:hover .profile__button,
+    &.active .profile__button {
+        color: @primary;
+    }
+
+    &:hover .profile__button:before,
+    &.active .profile__button:before {
+        border-color: @primary;
+
+        top: 1.3rem;
+
+        transform: rotate(405deg);
+    }
+}
+
+
+
+.profile__button {
+    display: none;
+    padding: 0.5rem 2rem 0.5rem 3rem;
+
+    font-size: inherit;
+    color: @secondary;
+    text-transform: uppercase;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: color 0.2s linear;
+    position: relative;
+
+
+    &:before {
+        .element(1rem, 1rem, transparent);
+
+        border-top: 0.1rem solid @secondary;
+        border-left: 0.1rem solid @secondary;
+
+        top: 0.9rem;
+        left: 1rem;
+
+        transform: rotate(225deg);
+        transition: border-color 0.2s linear, top 0.2s linear, transform 0.2s linear;
+    }
+}
+
+
+
+.profile__list {
+    min-width: 12rem;
+
+    text-align: center;
+
+    background-color: @primary;
+    border: 0.1rem solid @secondary;
+    visibility: hidden;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+
+    transition: visibility 0.1s linear;
+
+
+    &.visible {
+        visibility: visible;
+    }
+}
+
+
+
+.profile__menu:hover .profile__list {
+    visibility: visible;
+}
+
+
+
+.profile__link {
+    display: block;
+    padding: 0 1.5rem;
+
+    color: @secondary;
+
+    border-bottom: 0.1rem solid @secondary;
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+
+    &:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+
+
+
+    &.no-active {
+        color: @no-active;
+
+        pointer-events: none;
+    }
+
+
+    &.active {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+}
+
+
+
+@media @desktop {
+    .profile {
+        width: 35rem;
+    }
+}
+
+
+
+@media @laptop {
+    .profile {
+        width: 30rem;
+        height: calc(100vh - 5.5rem);
+
+
+        &.fixed {
+            height: calc(100vh - 4rem);
+        }
+    }
+
+
+
+    .profile__menu {
+        width: 3rem;
+        height: 3rem;
+    }
+
+
+
+    .profile__list {
+        min-width: 10rem;
+    }
+}
+
+
+
+@media @tablet {
+    .profile__menu {
+        width: 100%;
+        height: auto;
+
+        border: none;
+        border-radius: 0;
+    }
+
+
+
+    .profile__button {
+        display: block;
+    }
+
+
+
+    .profile__list {
+        top: calc(100% + 0.1rem);
+        right: -0.1rem;
+    }
+}
+
+
+
+@media @small {
+    .profile {
+        width: 100%;
+    }
+}

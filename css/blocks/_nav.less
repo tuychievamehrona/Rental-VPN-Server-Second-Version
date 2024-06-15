@@ -1,0 +1,103 @@
+// main: ../style.less
+
+.nav {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+.nav__link {
+    margin-right: 6rem;
+
+    color: @secondary;
+    text-transform: uppercase;
+
+    position: relative;
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+
+    &:before {
+        .element(0, 0.1rem, @secondary);
+
+        top: -0.2rem;
+        left: 0;
+
+        transition: width 0.2s linear;
+    }
+
+
+    &:hover&:before {
+        width: 100%;
+    }
+
+
+    &.active&:before {
+        width: 100%;
+    }
+}
+
+
+
+@media @desktop {
+    .nav__link {
+        margin-right: 3rem;
+    }
+}
+
+
+
+@media @tablet {
+    .nav {
+        display: none;
+
+        text-align: center;
+
+        background-color: @primary;
+        border: 0.1rem solid @secondary;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+
+
+        &.active {
+            display: block;
+        }
+    }
+
+
+
+    .nav__link {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin-right: 0;
+
+        border-bottom: 0.1rem solid @secondary;
+
+        transition: color 0.2s linear, background-color 0.2s linear;
+
+
+        &:hover&:before {
+            width: 0;
+        }
+
+        &:hover {
+            color: @primary;
+
+            background-color: @secondary;
+        }
+
+
+        &.active&:before {
+            width: 0;
+        }
+
+        &.active {
+            color: @primary;
+
+            background-color: @secondary;
+        }
+    }
+}

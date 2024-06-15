@@ -1,0 +1,38 @@
+// main: ../style.less
+
+.socials {
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+
+
+.socials__link {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 3rem;
+
+    position: relative;
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+@media @laptop {
+    .socials {
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    .socials__link {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1.5rem;
+    }
+}

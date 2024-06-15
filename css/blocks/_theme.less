@@ -1,0 +1,52 @@
+// main: ../style.less
+
+.theme {
+    margin-left: 3rem;
+}
+
+
+
+.theme__button {
+    display: none;
+    width: 4rem;
+    height: 4rem;
+
+    border: 0.1rem solid @secondary;
+    border-radius: 50%;
+    cursor: default;
+
+    position: relative;
+    transition: background-color 0.2s linear;
+
+
+    &:hover {
+        background-color: @secondary;
+    }
+
+    &:hover .icons {
+        fill: @primary;
+        stroke: @primary;
+    }
+
+
+    &.active {
+        display: block;
+    }
+}
+
+
+
+@media @desktop {
+    .theme {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+@media @laptop {
+    .theme__button {
+        width: 3rem;
+        height: 3rem;
+    }
+}
